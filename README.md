@@ -6,7 +6,7 @@ This is where Grid-Aid comes in, users select a US county, choose an "N" amount 
 
 ## Motivation
 
-Aaron and Anay are from Texas; together, they experienced the worst impacts of Winter Storm Uri (2021) and Hurricane Beryl (2024), which left parts of the Austin and Houston areas without power for many days. Especially for people who rely on powered medical equipment or live in rural, underfunded areas, these outages can be especially dangerous. 
+My friends from Texas experienced the worst impacts of Winter Storm Uri (2021) and Hurricane Beryl (2024), which left parts of the Austin and Houston areas without power for many days. Especially for people who rely on powered medical equipment or live in rural, underfunded areas, these outages can be especially dangerous. 
 
 That's where GridAid comes in–our purpose is to form the utility for civilians and city planners alike, helping plan where to place limited backup-power resources using public data on Medicare beneficiaries (data from HHS emPOWER).
 
