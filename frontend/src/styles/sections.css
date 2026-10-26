@@ -1,0 +1,111 @@
+/* ---------- sections below the stage: white page, plain type ---------- */
+.progress { position: fixed; z-index: 100; top: 0; left: 0; right: 0; height: 2px; pointer-events: none; }
+.progress i { display: block; height: 100%; background: var(--ink); transform: scaleX(0); transform-origin: 0 50%; }
+
+.sec { position: relative; padding: clamp(56px, 7vw, 104px) var(--gutter) 0; }
+.sec-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px 24px; flex-wrap: wrap; padding: 0 4px 18px; border-bottom: 1px solid var(--rule-2); }
+.sec-t { font: 600 clamp(30px, 3.6vw, 48px)/1.1 var(--sans); letter-spacing: -0.02em; }
+.sec-k { margin-top: 6px; font-size: 15px; color: var(--ink-3); }
+
+.sec .card { padding: 16px 18px 18px; }
+.sec .card-h { margin-bottom: 12px; font-size: 13px; }
+.sec .card p { font-size: 15px; line-height: 1.55; color: var(--ink-2); }
+.sec .card .foot { font-size: 12.5px; margin-top: 12px; padding-top: 10px; }
+
+/* see logistics: the way into page two */
+.logistics-btn { display: inline-flex; align-items: center; gap: 12px; padding: 16px 28px; border-radius: 8px; background: var(--ink); color: #fff; font: 600 18px/1 var(--sans); transition: background 0.15s; }
+.logistics-btn span { display: inline-block; transition: transform 0.2s; }
+.logistics-btn:hover { background: #000; }
+.logistics-btn:hover span { transform: translateX(4px); }
+
+/* join us */
+.data-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 8px; margin-top: 24px; align-items: start; }
+.data-grid > .join { grid-column: 1 / span 8; }
+.data-grid > .data-side { grid-column: 9 / span 4; display: flex; flex-direction: column; gap: 8px; }
+
+/* sources and research: APA references, hanging indent like a printed bibliography */
+.apa { padding-left: 1.6em; text-indent: -1.6em; font-size: 12.5px !important; line-height: 1.5 !important; color: var(--ink-2); overflow-wrap: anywhere; }
+.apa a { color: var(--accent); text-decoration: none; }
+.apa a:hover { text-decoration: underline; }
+.refs-g { border-top: 1px solid var(--rule); }
+.refs-g:first-of-type { border-top: 0; }
+.refs-g summary { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; cursor: pointer; list-style: none; font: 600 14px/1.2 var(--sans); }
+.refs-g summary::-webkit-details-marker { display: none; }
+.refs-g summary span { font-weight: 400; font-size: 12px; color: var(--ink-3); }
+.refs-g summary span::after { content: " +"; }
+.refs-g[open] summary span::after { content: " −"; }
+.refs-g ol { display: flex; flex-direction: column; gap: 10px; padding-bottom: 12px; }
+.refs-use { margin-top: 3px; font-size: 12px !important; line-height: 1.4 !important; color: var(--ink-3) !important; }
+.data-grid > .research { grid-column: 1 / -1; }
+.research ol { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 0; counter-reset: f; }
+.research li { position: relative; padding: 4px 18px 6px 18px; border-left: 1px solid var(--rule); counter-increment: f; }
+.research li:first-child { border-left: 0; padding-left: 0; }
+.research li::before { content: counter(f); display: block; margin-bottom: 6px; font: 600 12px/1 var(--sans); color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.research-f { font-size: 14px !important; line-height: 1.5 !important; color: var(--ink) !important; margin-bottom: 6px; }
+
+.join { display: grid !important; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.25fr); padding: 0 !important; animation: join-glow 5s ease-in-out infinite; }
+@keyframes join-glow {
+  50% { box-shadow: 0 0 0 1px rgba(109, 74, 255, 0.5), 0 0 40px rgba(109, 74, 255, 0.38), 0 0 120px rgba(109, 74, 255, 0.22); }
+}
+.join-pitch { padding: 24px 26px 26px; background: var(--card-2); border-right: 1px solid var(--rule); }
+.join-pitch h4 { margin: 22px 0 8px; font: 600 14px/1.2 var(--sans); color: var(--ink); }
+.join-kick { margin-bottom: 8px; font: 500 13px/1.2 var(--sans) !important; color: var(--ink-3) !important; }
+.join-h { font: 600 clamp(22px, 2vw, 28px)/1.2 var(--sans); letter-spacing: -0.015em; }
+.sec .join-lead { margin-top: 10px; }
+.join-gets li { position: relative; padding: 6px 0 6px 18px; font-size: 14px; line-height: 1.45; color: var(--ink-2); }
+.join-gets li::before { content: ""; position: absolute; left: 2px; top: 13px; width: 6px; height: 6px; border-radius: 50%; background: var(--ink-3); }
+.join-other { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.join-other li { display: flex; align-items: center; min-height: 64px; padding: 14px 16px; border: 1px solid var(--rule-2); border-radius: 8px; background: #fff; font: 600 15px/1.3 var(--sans); color: var(--ink); }
+
+.jf, .join-done { padding: 24px 26px 26px; display: flex; flex-direction: column; gap: 22px; }
+.jf fieldset { border: 0; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 14px 18px; }
+.jf legend { grid-column: 1 / -1; width: 100%; padding: 0 0 10px; margin-bottom: 4px; border-bottom: 1px solid var(--rule); font: 600 15px/1.2 var(--sans); color: var(--ink); }
+.jf-f { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.jf-f.wide { grid-column: 1 / -1; }
+.jf-f > span { font-size: 13px; color: var(--ink-2); }
+.jf input:not([type="radio"]):not([type="checkbox"]), .jf select {
+  width: 100%; padding: 9px 11px; border: 1px solid var(--rule-2); border-radius: 6px; background: #fff;
+  font: 400 15px/1.3 var(--sans); color: var(--ink); outline: none; transition: border-color 0.15s;
+}
+.jf select { appearance: none; cursor: pointer; padding-right: 30px; background: linear-gradient(45deg, transparent 50%, var(--ink-2) 50%) right 16px center / 5px 5px no-repeat, linear-gradient(-45deg, transparent 50%, var(--ink-2) 50%) right 11px center / 5px 5px no-repeat, #fff; }
+.jf input::placeholder { color: var(--ink-3); opacity: 0.7; }
+.jf input:focus, .jf select:focus { border-color: var(--ink-2); }
+.jf input:user-invalid, .jf select:user-invalid { border-color: var(--gap); }
+.jf-choice { display: flex; gap: 6px; flex-wrap: wrap; }
+.jf-choice label { padding: 8px 14px; border: 1px solid var(--rule-2); border-radius: 6px; font-size: 14px; cursor: pointer; transition: background 0.12s, color 0.12s, border-color 0.12s; }
+.jf-choice label:hover { border-color: var(--ink-3); }
+.jf-choice label.on { background: var(--ink); border-color: var(--ink); color: #fff; }
+.jf-choice input { position: absolute; opacity: 0; pointer-events: none; }
+.jf-choice label:has(input:focus-visible) { outline: 2px solid var(--ink); outline-offset: 2px; }
+.jf-ok { display: flex; gap: 10px; align-items: flex-start; font-size: 13.5px; line-height: 1.45; color: var(--ink-2); cursor: pointer; }
+.jf-ok input { flex: none; width: 16px; height: 16px; margin: 2px 0 0; accent-color: var(--ink); cursor: pointer; }
+.jf-submit { align-self: flex-start; padding: 13px 22px; border-radius: 8px; background: var(--ink); color: #fff; font: 600 15px/1 var(--sans); transition: background 0.15s; }
+.jf-submit:hover { background: #000; }
+.join-done { justify-content: center; }
+
+/* footer */
+.foot-sec { display: flex; align-items: center; gap: 12px 24px; flex-wrap: wrap; margin-top: clamp(64px, 8vw, 120px); padding: 24px calc(var(--gutter) + 4px) 32px; border-top: 1px solid var(--rule-2); font-size: 13px; color: var(--ink-3); }
+.foot-logo { font-size: 22px; }
+.foot-logo .logo-bolt { animation: none; }
+.foot-sec a { margin-left: auto; color: var(--ink-2); text-decoration: none; }
+.foot-sec a:hover { text-decoration: underline; }
+
+/* ---------- smaller screens ---------- */
+@media (max-width: 1100px) {
+  .research li { border-left: 0; padding: 12px 0; border-top: 1px solid var(--rule); }
+  .research li:first-child { border-top: 0; padding-top: 0; }
+  .data-grid { grid-template-columns: 1fr; }
+  .data-grid > * { grid-column: auto !important; }
+  .join { grid-template-columns: 1fr; }
+  .join-pitch { border-right: 0; border-bottom: 1px solid var(--rule); }
+}
+@media (max-width: 640px) {
+  .jf fieldset { grid-template-columns: 1fr; }
+  .logistics-btn { width: 100%; justify-content: center; }
+  .foot-sec a { margin-left: 0; }
+}
+
+/* spam trap for Formspree, and the send error */
+.jf .hp { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; opacity: 0; }
+.jf-err { font-size: 13.5px; color: var(--gap-d); }
+.jf[hidden] { display: none; }
